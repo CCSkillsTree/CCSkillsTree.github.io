@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LeetCode on 通電技能樹</title>
+    <link>https://YuShengLi1105.github.io/categories/leetcode/</link>
+    <description>Recent content in LeetCode on 通電技能樹</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 24 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://YuShengLi1105.github.io/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[LeetCode]Problems-121. Best Time to Buy and Sell Stock</title>
+      <link>https://YuShengLi1105.github.io/2017/09/text0003/</link>
+      <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://YuShengLi1105.github.io/2017/09/text0003/</guid>
+      <description>&lt;p&gt;此篇文章要探討的問題Best Time to Buy and Sell Stock,意指如何在股市波段中找出最大的利潤.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
