@@ -29,5 +29,18 @@
       <description>&lt;p&gt;本篇文章要闡述的是筆者在LeetCode上碰到的一種題型:冪次(Power),大概有三個題目與其相關&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>[LeetCode]Problems- 461. Hamming Distance</title>
+      <link>https://YuShengLi1105.github.io/2017/07/text0005/</link>
+      <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://YuShengLi1105.github.io/2017/07/text0005/</guid>
+      <description>&lt;p&gt;有鑑於上次按隨機鍵出來的題目難度特高,花了不少心思,
+並且上週去成大一個禮拜沒碰到程式許久,
+我決定這次來解決一些較簡單的題目,
+並嘗試不用C++而用C語言來完成
+這次練習的題目是Hamming Distance&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
