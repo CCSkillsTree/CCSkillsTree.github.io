@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.72.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="CC Skills Tree">
+<meta name="keywords" content="">
+<meta name="description" content="在做完[思路]LeetCode Problems- 441. Arranging Coins這題之後
+隔天一早十點多起床想說再繼續挑戰一題來試看看
+於是按下了LeetCode首頁右下的&quot;Pick One&quot;鍵
+跳出了這一題,
+原文如下:">
+
+
+<meta property="og:description" content="在做完[思路]LeetCode Problems- 441. Arranging Coins這題之後
+隔天一早十點多起床想說再繼續挑戰一題來試看看
+於是按下了LeetCode首頁右下的&quot;Pick One&quot;鍵
+跳出了這一題,
+原文如下:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[LeetCode]Problems- 300. Longest Increasing Subsequence">
+<meta name="twitter:title" content="[LeetCode]Problems- 300. Longest Increasing Subsequence">
+<meta property="og:url" content="https://YuShengLi1105.github.io/2017/06/text0006/">
+<meta property="twitter:url" content="https://YuShengLi1105.github.io/2017/06/text0006/">
+<meta property="og:site_name" content="通電技能樹">
+<meta property="og:description" content="在做完[思路]LeetCode Problems- 441. Arranging Coins這題之後
+隔天一早十點多起床想說再繼續挑戰一題來試看看
+於是按下了LeetCode首頁右下的&quot;Pick One&quot;鍵
+跳出了這一題,
+原文如下:">
+<meta name="twitter:description" content="在做完[思路]LeetCode Problems- 441. Arranging Coins這題之後
+隔天一早十點多起床想說再繼續挑戰一題來試看看
+於是按下了LeetCode首頁右下的&quot;Pick One&quot;鍵
+跳出了這一題,
+原文如下:">
+<meta property="og:locale" content="zh-tw">
+
+  
+    <meta property="article:published_time" content="2017-06-26T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2017-06-26T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="LeetCode">
+    
+  
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://YuShengLi1105.github.io/img/post/Text0006/1.jpg">
+  <meta property="twitter:image" content="https://YuShengLi1105.github.io/img/post/Text0006/1.jpg">
+
+
+
+
+
+  <meta property="og:image" content="https://YuShengLi1105.github.io/img/bloglogo.png">
+  <meta property="twitter:image" content="https://YuShengLi1105.github.io/img/bloglogo.png">
+
+
+    <title>[LeetCode]Problems- 300. Longest Increasing Subsequence</title>
+
+    <link rel="icon" href="https://YuShengLi1105.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://YuShengLi1105.github.io/2017/06/text0006/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://YuShengLi1105.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-171608259-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://YuShengLi1105.github.io/">通電技能樹</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://YuShengLi1105.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://YuShengLi1105.github.io/img/bloglogo.png" alt="作者的圖片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://YuShengLi1105.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://YuShengLi1105.github.io/img/bloglogo.png" alt="作者的圖片" />
+        </a>
+        <h4 class="sidebar-profile-name">CC Skills Tree</h4>
+        
+          <h5 class="sidebar-profile-bio">&lsquo;I&rsquo;ve seen things you people wouldn&rsquo;t believe&hellip;. attack ships on fire off the shoulder of Orion. I&rsquo;ve watched see Beams glitter in the dark near the Tannhauser Gate. All those moments, will be lost in time like tears in rain&hellip;&rsquo;</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://YuShengLi1105.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首頁</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://YuShengLi1105.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分類</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://YuShengLi1105.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">標籤</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://YuShengLi1105.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">所有文章</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://YuShengLi1105.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">關於我</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      [LeetCode]Problems- 300. Longest Increasing Subsequence
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2017-06-26T00:00:00Z">
+        
+  
+  
+  
+  
+    26 六月 2017
+  
+
+      </time>
+    
+    
+  
+  
+    <span>分類</span>
+    
+      <a class="category-link" href="https://YuShengLi1105.github.io/categories/leetcode">LeetCode</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>在做完<a href="https://www.blogger.com/blog/post/edit/2742416031412549523/484633310626102112#">[思路]LeetCode Problems- 441. Arranging Coins</a>這題之後
+隔天一早十點多起床想說再繼續挑戰一題來試看看
+於是按下了LeetCode首頁右下的&quot;Pick One&quot;鍵
+跳出了這一題,
+原文如下:</p>
+<blockquote>
+<p>Given an unsorted array of integers, find the length of longest increasing subsequence.
+For example,Given <code>[10, 9, 2, 5, 3, 7, 101, 18]</code>,The longest increasing subsequence is <code>[2, 3, 7, 101]</code>, therefore the length is <code>4</code>. Note that there may be more than one LIS combination, it is only necessary for you to return the length.
+Your algorithm should run in O(n2) complexity.
+<strong>Follow up:</strong> Could you improve it to O(n log n) time complexity?</p>
+</blockquote>
+<p>當下看到時有點傻眼</p>
+<p>天啊這題目到底想要求甚麼啊~??</p>
+<p>多看幾次才逐漸明瞭</p>
+<p>好像是要求這有序數列裡</p>
+<p><strong>最長的遞增數列 的個數</strong></p>
+<p>如上述那一串數列中,最長的遞增數列為 2 3 7 101</p>
+<p>其長度是4</p>
+<p>但就數列&quot;內容&quot;來說這不算是唯一的答案,</p>
+<p>也應該能寫成2 5 7 101</p>
+<p>或者是2 3 7 18 這類</p>
+<p>當發覺答案不會是唯一解的時候,其實內心覺得有點怕怕的@@</p>
+<p>(心中OS開始)</p>
+<p>認真在看題目想如何解的時候,腦袋想法變得十分稀少,不知道要如何下手</p>
+<p>相信在寫code的初學者或大學生(例如我)(專家不算)都會有這種感受</p>
+<p>有時候某些題目是我們一眼就可以看出來,找出答案的問題</p>
+<p>但卻不曉得要如何描述給冷冰冰的電腦/編譯器聽</p>
+<p>在升學教育體制下,我們的大腦被訓練得可說是非常的直覺與快速思考,</p>
+<p>但卻很少想過 &ldquo;思考&quot;的過程/邏輯是如何形塑而成的,</p>
+<p>只重視去脈絡化的&quot;答案&rdquo;</p>
+<p>這樣的結果導致於遇到陌生題目時會變得不知所措</p>
+<p>要改善的方法</p>
+<p>就是認真地回想/recall 解題的過程</p>
+<p>發覺自己在邏輯/思考上是否有不足之處</p>
+<p>(心中OS結束)</p>
+<p>總之,我一開始是想要用最簡單/快速的方法來求出此題的解答</p>
+<p>雖然我隱隱約約感覺可能會用到兩個FOR迴圈,但我暫時還是撇開它不管</p>
+<p>從最簡單的兩個兩個比較來思考的話,有沒有可能求出答案來呢~?</p>
+<p>當時想法是這樣的:</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0006/1.jpg" alt="img/post/Text0006/1.jpg"></p>
+<p>假如我直接兩個兩個元素做比較,若有後一個比前一個大的情況,則得知這兩個元素呈遞增情況,</p>
+<p>直接把這兩個元素取出來存進新的vector中</p>
+<p>存到新vector後再做一遍,確定這一數列是遞增狀態</p>
+<p>全部處理完後若有碰到有相同元素出現</p>
+<p>再把它排除掉就好</p>
+<p>最後回傳這個vector的大小size()就好了~!</p>
+<p>確定乍看之下好像沒什麼大問題後,就開始撰寫程式碼:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> v1;
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; i<span style="color:#f92672">&lt;=</span>nums.size(); i<span style="color:#f92672">++</span>){
+	<span style="color:#66d9ef">if</span> (nums[i]<span style="color:#f92672">&lt;</span>nums[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+	{
+		v1.push_back(nums[i]);
+		v1.push_back(nums[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]);
+	}<span style="color:#75715e">//IF
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">else</span> {}<span style="color:#75715e">//else
+</span><span style="color:#75715e"></span>}<span style="color:#75715e">//for1
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> k<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;k<span style="color:#f92672">&lt;</span>v1.size();k<span style="color:#f92672">++</span>){
+	<span style="color:#66d9ef">if</span> (v1[k]<span style="color:#f92672">&gt;</span>v1[k<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+	{
+	std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator it <span style="color:#f92672">=</span> v1.begin()<span style="color:#f92672">+</span>k;
+	v1.erase(it);
+	}<span style="color:#75715e">//IF2
+</span><span style="color:#75715e"></span>}<span style="color:#75715e">//FOR2
+</span><span style="color:#75715e">//刪掉重複元素
+</span><span style="color:#75715e"></span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator eraseit<span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>unique(v1.begin(), v1.end()); <span style="color:#75715e">//排不重覆元素;
+</span><span style="color:#75715e"></span>v1.erase(eraseit, v1.end()); <span style="color:#75715e">//沒被排到的刪掉
+</span><span style="color:#75715e">//for(int j=0; j&lt;v1.size(); j++)
+</span><span style="color:#75715e">//cout &lt;&lt; v1[j] &lt;&lt; &#34; &#34;;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">return</span> v1.size();
+</code></pre></div><p>經過測試之後沒發覺問題直接按了送出鍵</p>
+<p>孰不知,這就是一連串問題的開始</p>
+<p>題目的<strong>Credits</strong>叫做<a href="https://www.blogger.com/blog/post/edit/2742416031412549523/484633310626102112#">@pbrother</a>的人給的特殊case 真的天殺的不是普通特殊,例如:</p>
+<p>1.空vector</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0006/2.jpg" alt="img/post/Text0006/2.jpg"></p>
+<p>好吧,那就在多加個判斷式判別好了,總可以了吧</p>
+<p>2.一個元素 [0]</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0006/3.jpg" alt="img/post/Text0006/3.jpg"></p>
+<p>好吧,那再多加一個判斷size有沒有大於1 ,總可以了吧</p>
+<p>3.重複元素 [2 2]</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0006/4.jpg" alt="img/post/Text0006/4.jpg"></p>
+<p>啥米,還會有重複出現的例子,那再把相鄰元素重複的話去掉,總可以了吧</p>
+<p>4.[1 3 2]</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0006/5.jpg" alt="img/post/Text0006/5.jpg"></p>
+<p>&hellip;.不不不這我就護航不下去了,到底哪裡出問題????</p>
+<p>我相信在50%的case中一定都能夠正確運作,但總是難免會有50%的例外狀況啊~</p>
+<p>(OS:明明自己邏輯不好還怪Credits的人)</p>
+<p>結果這樣子東改西改把例外情況改掉,</p>
+<p>整個程式的走向到最後連自己都不曉得改錯了甚麼&hellip;..</p>
+<p>心力交瘁的情況下</p>
+<p>只好先擱在一旁明天再繼續想</p>
+<p>(隔天早上)</p>
+<p>我回顧了一下我的邏輯,老實說的確是十分粗糙又不嚴謹,</p>
+<p>所以我決定全部打掉重來,改用雙重FOR迴圈來撰寫</p>
+<p>將原本程式碼寫成:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>nums.size()<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;i<span style="color:#f92672">++</span>){
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;j<span style="color:#f92672">&lt;</span>i;j<span style="color:#f92672">++</span>){
+		<span style="color:#66d9ef">if</span> (nums[j]<span style="color:#f92672">&gt;=</span>nums[i])
+		{
+		vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator k <span style="color:#f92672">=</span> nums.begin()<span style="color:#f92672">+</span>j;
+		nums.erase(k);
+		}
+	}
+}
+</code></pre></div><p>這一段雙重FOR迴圈的意思是說,</p>
+<p>要確保數列中的&quot;前一個元素&quot;要小於&quot;後一個元素&rdquo;</p>
+<p>假如&quot;前一個元素&quot;有大於&quot;後一個元素&rdquo;,則這前一個元素會被刪除,</p>
+<p>確保數列一定要呈現由小到大的狀態</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> q<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;q<span style="color:#f92672">&lt;</span>nums.size();q<span style="color:#f92672">++</span>){
+	<span style="color:#66d9ef">if</span> (nums[q]<span style="color:#f92672">&gt;</span>nums[q<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+	{
+	<span style="color:#75715e">//刪掉q+1
+</span><span style="color:#75715e"></span>	vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator k2 <span style="color:#f92672">=</span> nums.begin()<span style="color:#f92672">+</span>(q<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+	nums.erase(k2);
+	}
+}
+<span style="color:#66d9ef">return</span> nums.size();
+</code></pre></div><p>這裡的第二個FOR則是為了要做檢查尾端,</p>
+<p>因為萬一尾端的數字比前一個還要小的話則會不小心刪掉前一個數字,導致數列最後尾端的字沒有符合規律</p>
+<p>這第二個寫法(應該)比第一種寫法還要簡潔一點,</p>
+<p>畢竟沒有多增加新的vector,造成多餘的計算量</p>
+<p>接著再加上一些判斷條件(不為空向量&amp;長度大於1)之後,重新再跑跑看&hellip;..</p>
+<p>出現一個意想不到的問題</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0006/6.jpg" alt="img/post/Text0006/6.jpg"></p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0006/7.jpg" alt="img/post/Text0006/7.jpg"></p>
+<p>居然輸入一個長達2500個元素的向量,程式居然會跑不起來</p>
+<p>這時我已經發覺,目前這狀況,似乎不是跟邏輯之類的有關係了</p>
+<p>反而是程式運算量負荷不了的問題</p>
+<p>這不得不讓我重新思考精簡程式的方法</p>
+<p>假如若要再用更好的方法來運算的話,那就要不單單用for if while這些語法來做最好的方案就是直接用C++內的STL庫,例如<!-- raw HTML omitted --></p>
+<p>那有沒有一個函式,可以用來找數列中的元素,做類似比大小的事情呢&hellip;?</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>結果仔細一查還真的有相關的function,</p>
+<p>盛重介紹:</p>
+<p><strong>lower_bound用法</strong></p>
+<p>std::lower_bound(迭代子1,迭代子2,想插入的數字假設為3)</p>
+<p>這個函數的用法在於,它可以找出在一個有順序的數列中,找出一個可以安插3的</p>
+<p><strong>位置</strong></p>
+<p>使其能大於等於前一個元素假設現在有一數列如下:</p>
+<p>4 10 11 30 69 70 96 100</p>
+<p>我們把這數列存入vector中,命為v1</p>
+<p>則第一個位置可以用v1.begin()表示最後一個位置可以用v1.end()表示</p>
+<p>若我們給定數字叫做12好了則12可以被插入數列哪個位置,使其能夠大於前面的數字呢?</p>
+<p>應該是原本數列放30的那個位置對吧~</p>
+<p>故求法就能寫成:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator it <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>lower_bound(v1.begin(), v1.end(), <span style="color:#ae81ff">12</span>);
+</code></pre></div><p>這個it迭代子,會指向原本數列中存放30的那個</p>
+<p><strong>位置</strong></p>
+<p>這個位置沒辦法單純用cout輸出來看,但可以利用其類似於指標的特性</p>
+<p>在編譯器上寫</p>
+<p>cout&laquo;</p>
+<p>*<strong>it</strong></p>
+<p>&laquo;endl; //存取出vector元素則會輸出其結果為 30 也就是數列第4個位置,可以插入12</p>
+<p>有了這個function,則我就可以把整個程式又一次大幅簡化</p>
+<p>最後寫成如下結果:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> v1; <span style="color:#75715e">//先定義一個空向量
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i<span style="color:#f92672">&lt;</span>nums.size(); i<span style="color:#f92672">++</span>) {
+	std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator it;
+	it <span style="color:#f92672">=</span> lower_bound(v1.begin(), v1.end(), nums[i]); <span style="color:#75715e">//在v1中適合插入nums[i]數字的位置
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (it <span style="color:#f92672">==</span> v1.end()) <span style="color:#75715e">//假如指向最後一個位置,代表原v1中的數字都比nums[i]還小
+</span><span style="color:#75715e"></span>{
+	v1.push_back(nums[i]); <span style="color:#75715e">//其數字直接存入v1,成遞增狀態
+</span><span style="color:#75715e"></span>}
+<span style="color:#66d9ef">else</span> <span style="color:#75715e">//假如不是為空,代表原v1中的**數字比nums[i]還要大**
+</span><span style="color:#75715e"></span>{
+	<span style="color:#f92672">*</span>it <span style="color:#f92672">=</span> nums[i]; <span style="color:#75715e">//利用類似指標的特性,把原v1中的**數字直接取代掉**
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>這樣直接看可能不太能理解,直接在紙上畫圖示範:</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0006/8.jpg" alt="img/post/Text0006/8.jpg"></p>
+<p>注意的是,vector的end()指的是vector</p>
+<p>最尾端元素的<strong>下一個位置</strong></p>
+<p>不代表最末元素,所以可以利用這特性</p>
+<p>這樣做下來就可以確保是一個最長遞增的數列了</p>
+<p>再加上一些判斷條件(不為空向量&amp;長度大於1)之後,重新再跑跑看&hellip;..成功! .</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0006/9.jpg" alt="img/post/Text0006/9.jpg"></p>
+<p>這次算是有進步吧哈哈~ヾ(*´∇`)ﾉ</p>
+<p>總覺得寫到最後反而是要練習vector的用法,以及利用其迭代子的特性</p>
+<p>就可以順利解出這題</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/07/text0005/" data-tooltip="[LeetCode]Problems- 461. Hamming Distance">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://YuShengLi1105.github.io/2017/06/text0006/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 <a href="https://github.com/YuShengLi1105">CCSkillsTree</a>. 版權所有All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/07/text0005/" data-tooltip="[LeetCode]Problems- 461. Hamming Distance">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://YuShengLi1105.github.io/2017/06/text0006/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FYuShengLi1105.github.io%2F2017%2F06%2Ftext0006%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://YuShengLi1105.github.io/img/bloglogo.png" alt="作者的圖片" />
+    
+    <h4 id="about-card-name">CC Skills Tree</h4>
+    
+      <div id="about-card-bio">&lsquo;I&rsquo;ve seen things you people wouldn&rsquo;t believe&hellip;. attack ships on fire off the shoulder of Orion. I&rsquo;ve watched see Beams glitter in the dark near the Tannhauser Gate. All those moments, will be lost in time like tears in rain&hellip;&rsquo;</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Software Engineer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Taipei，Taiwan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    <div id="cover" style="background-image:url('https://images.unsplash.com/photo-1590933937035-8a095cd97175?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1534&amp;q=80');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://YuShengLi1105.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/YuShengLi1105.github.io\/2017\/06\/text0006\/';
+          
+            this.page.identifier = '\/2017\/06\/text0006\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'ccskillstree';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

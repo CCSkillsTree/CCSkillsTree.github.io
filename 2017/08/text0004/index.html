@@ -8,34 +8,30 @@
 <meta name="generator" content="Hugo 0.72.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="CC Skills Tree">
 <meta name="keywords" content="">
-<meta name="description" content="每年的九月底到十月初這段期間是大學生準備推甄研究所的繁忙時刻，去年的我在這個時間點也是忙得焦頭爛額。
-這次想利用此篇文章來跟讀者分享版主我個人在準備碩班推甄的經驗，希望可以幫到同樣也是有意願來讀通訊相關科系的學弟妹們。">
+<meta name="description" content="Leetcode於每周末都會舉辦線上的程式解題比賽,在比賽結束後便會釋出最新的題目供大家練習.這次要介紹的便是上週出現的新題目.">
 
 
-<meta property="og:description" content="每年的九月底到十月初這段期間是大學生準備推甄研究所的繁忙時刻，去年的我在這個時間點也是忙得焦頭爛額。
-這次想利用此篇文章來跟讀者分享版主我個人在準備碩班推甄的經驗，希望可以幫到同樣也是有意願來讀通訊相關科系的學弟妹們。">
+<meta property="og:description" content="Leetcode於每周末都會舉辦線上的程式解題比賽,在比賽結束後便會釋出最新的題目供大家練習.這次要介紹的便是上週出現的新題目.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="106年推甄通訊所心得(上)">
-<meta name="twitter:title" content="106年推甄通訊所心得(上)">
-<meta property="og:url" content="https://YuShengLi1105.github.io/2017/09/text0001/">
-<meta property="twitter:url" content="https://YuShengLi1105.github.io/2017/09/text0001/">
+<meta property="og:title" content="[LeetCode]Problems- 657. Judge Route Circle">
+<meta name="twitter:title" content="[LeetCode]Problems- 657. Judge Route Circle">
+<meta property="og:url" content="https://YuShengLi1105.github.io/2017/08/text0004/">
+<meta property="twitter:url" content="https://YuShengLi1105.github.io/2017/08/text0004/">
 <meta property="og:site_name" content="通電技能樹">
-<meta property="og:description" content="每年的九月底到十月初這段期間是大學生準備推甄研究所的繁忙時刻，去年的我在這個時間點也是忙得焦頭爛額。
-這次想利用此篇文章來跟讀者分享版主我個人在準備碩班推甄的經驗，希望可以幫到同樣也是有意願來讀通訊相關科系的學弟妹們。">
-<meta name="twitter:description" content="每年的九月底到十月初這段期間是大學生準備推甄研究所的繁忙時刻，去年的我在這個時間點也是忙得焦頭爛額。
-這次想利用此篇文章來跟讀者分享版主我個人在準備碩班推甄的經驗，希望可以幫到同樣也是有意願來讀通訊相關科系的學弟妹們。">
+<meta property="og:description" content="Leetcode於每周末都會舉辦線上的程式解題比賽,在比賽結束後便會釋出最新的題目供大家練習.這次要介紹的便是上週出現的新題目.">
+<meta name="twitter:description" content="Leetcode於每周末都會舉辦線上的程式解題比賽,在比賽結束後便會釋出最新的題目供大家練習.這次要介紹的便是上週出現的新題目.">
 <meta property="og:locale" content="zh-tw">
 
   
-    <meta property="article:published_time" content="2017-09-17T00:00:00">
+    <meta property="article:published_time" content="2017-08-26T00:00:00">
   
   
-    <meta property="article:modified_time" content="2017-09-17T00:00:00">
+    <meta property="article:modified_time" content="2017-08-26T00:00:00">
   
   
   
     
-      <meta property="article:section" content="Life">
+      <meta property="article:section" content="LeetCode">
     
   
   
@@ -49,8 +45,8 @@
 
 
 
-  <meta property="og:image" content="https://YuShengLi1105.github.io/img/post/Text0001/Untitled.png">
-  <meta property="twitter:image" content="https://YuShengLi1105.github.io/img/post/Text0001/Untitled.png">
+  <meta property="og:image" content="https://YuShengLi1105.github.io/img/post/Text0007/0.jpg">
+  <meta property="twitter:image" content="https://YuShengLi1105.github.io/img/post/Text0007/0.jpg">
 
 
 
@@ -60,14 +56,14 @@
   <meta property="twitter:image" content="https://YuShengLi1105.github.io/img/bloglogo.png">
 
 
-    <title>106年推甄通訊所心得(上)</title>
+    <title>[LeetCode]Problems- 657. Judge Route Circle</title>
 
     <link rel="icon" href="https://YuShengLi1105.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://YuShengLi1105.github.io/2017/09/text0001/">
+    <link rel="canonical" href="https://YuShengLi1105.github.io/2017/08/text0004/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -210,19 +206,19 @@ if (!doNotTrack) {
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      106年推甄通訊所心得(上)
+      [LeetCode]Problems- 657. Judge Route Circle
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-09-17T00:00:00Z">
+      <time itemprop="datePublished" datetime="2017-08-26T00:00:00Z">
         
   
   
   
   
-    17 九月 2017
+    26 八月 2017
   
 
       </time>
@@ -232,7 +228,7 @@ if (!doNotTrack) {
   
     <span>分類</span>
     
-      <a class="category-link" href="https://YuShengLi1105.github.io/categories/life">Life</a>
+      <a class="category-link" href="https://YuShengLi1105.github.io/categories/leetcode">LeetCode</a>
     
   
 
@@ -242,74 +238,62 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>每年的九月底到十月初這段期間是大學生準備推甄研究所的繁忙時刻，去年的我在這個時間點也是忙得焦頭爛額。
-這次想利用此篇文章來跟讀者分享版主我個人在準備碩班推甄的經驗，希望可以幫到同樣也是有意願來讀通訊相關科系的學弟妹們。</p>
-<p>本篇文主要包括了在大學畢業前於系上舉辦的考研分享會的內容，並再多補充些當時時間有限，未能在分享會上提及的小技巧。
-若覺得這篇文章對你們有幫助&amp;有任何問題的話，請不吝在此篇文章下支持&amp;留言，並分享給其他有需要的同學們。</p>
-<p>正文開始就用這張心智圖來概括講解推甄需要準備些甚麼吧~~!</p>
-<p><img src="https://YuShengLi1105.github.io/img/post/Text0001/Untitled.png" alt="img/post/Text0001/Untitled.png"></p>
-<p>研究所推甄主要可分為三個階段:</p>
-<p><strong>1.初試繳交備審資料   2.複試參加面試   3.錄取找指導教授</strong></p>
-<p>我就先從第一點開始講起</p>
-<p>1.備審資料</p>
-<p>備審資料是個很需要花費心思的東西，這是張你是否能有機會進入研所殿堂的入門票。會有同學認為說&quot;推甄不過就是在看成績好不好而已,不需要花時間準備&quot;但我個人是保持著好的心態:</p>
-<p><strong>不管你的成績是好是壞,都應該要準備出完美的資料</strong></p>
-<p>.假如你的成績沒特別好，卻又不想考試只要靠推甄錄取研究所，更得在備審資料上花費心思。</p>
-<p>在進一步解說如何做備審之前，有些資料是必須提早準備的，甚至於是應該在9月前就該做好，</p>
-<p>我是在升大四的暑假在公司實習之餘的空暇時間完成這三大工作:</p>
-<p>*<strong>選好目標科系</strong> ，並事先查好去年度的研究所簡章，心裡大致上曉得該準備甚麼資料</p>
-<p>*預先準備以下資料:</p>
-<ul>
-<li>大學時期拿過的獎狀</li>
-<li>幹部/服務證明</li>
-<li>英文證照</li>
-<li>整理好重要的研究/計畫成果</li>
-<li>參加活動的照片</li>
-</ul>
-<p>事先查好這些資料，在做備審時會省力許多</p>
-<p>*<strong>著手撰寫自傳草稿</strong></p>
-<p>自傳這種東西在備審資料中的地位其實是蠻尷尬的，審閱資料的教授不一定會對你的生平起興趣，但同時這也是 <strong>整份資料中原創性最高,最難寫的部分</strong></p>
-<p>畢竟和讀書計畫不同，基本上你碩一碩二該做的事情其實每個人都寫得差不多，有些同學可能還會有學校學長姊經驗可以參考，可是自傳每個人都應該是完全不同的，講白一點就是沒得抄襲。</p>
-<p>所以我會建議這個部分，能早點想清楚如何寫越好</p>
-<p>假如你這三個步驟都有提早做好,那麼就可以來詳細講述備審資料的成分有哪些:</p>
-<p><img src="https://YuShengLi1105.github.io/img/post/Text0001/Untitled1.png" alt="/img/post/Text0001/Untitled1.png"></p>
-<p>*<strong>在校成績!!!!!</strong></p>
-<p>這可以算是蠻重要的考量之一，畢竟這個社會就如此寫實，成績越好則越有高機率能夠通過審查</p>
-<p>以趴數來當作衡量的話，國立大學成績在前15%內都可以推推看研究所</p>
-<p>*<strong>個人簡介表!!!!</strong></p>
-<p><strong>不管學校簡章是否有規定，我都建議一定要做這張表</strong> 。這張表的功能如同履歷，要把你個人最優秀的成績及經歷濃縮進一張簡單扼要的A4紙內。</p>
-<p>具謠傳教授審查的時間不多，若製作這張表的話能讓評審委員一看就能了解</p>
-<p>成績好的人，在這張表中就把分數重點注明;</p>
-<p>成績普通的人就把個人的特殊經歷，哪幾堂相關課程的分數等重點注明，無論如何，目的就是在於要吸引教授的注意</p>
-<p>*<strong>自傳</strong></p>
-<p>自傳的長度不需要太長，盡量是控制在5~6頁為佳，除非你的大學生活真的是多采多姿.以下列出幾個在自傳中常見到的Title:</p>
-<p>&ndash;家庭生平/個人特質</p>
-<p>忌諱流水帳的寫法，重要的是家庭為你帶來怎樣的處事態度或人生哲學</p>
-<p>&ndash;求學生涯</p>
-<p>這段落不需要從國小寫到大學，我個人只區分成[升大學之前]和[升大學之後]這兩部</p>
-<p>&ndash;學業成績表現</p>
-<p>成績好的人在自傳內也要多多強調，最好是搭配長條圖或者折線圖來凸顯成績是不斷進步 or 有成長空間</p>
-<p>&ndash;特殊經歷</p>
-<p>若曾經有業界相關實習經驗的話也可以放入</p>
-<p><strong>&ndash;專題研究歷程!!!!!</strong></p>
-<p>若說教授想要自傳中要看到甚麼的話，可能就是這個最能吸引教授注意了。</p>
-<p>專題算是大學生涯裡不容忽視的項目，它代表了學生的研究技巧&amp;解決問題的能力，關於構思問題、蒐集資料、分析、並且撰寫的學問，類似「大學畢業論文」，若要推甄研究所除了課業成績優秀之外，就是要顧專題研究過程是否嚴謹，實驗模擬是否經得起驗證.教授衡量研究生也是看你能否具有獨立研究問題的能力.所以這方面我覺得是個值得好好發揮的段落。</p>
-<p>&ndash;未來期許 or 結語</p>
-<p>用來總結自傳的結尾宣傳語，可加可不加。</p>
-<p>*<strong>讀書計畫!!!!</strong></p>
-<p>再進碩士班的讀書計畫其實每個人都差不多,通常大概會寫這些:</p>
-<p>&ndash;大四畢業前至暑假:多修校內研究所課程，加強英文 or 程式語言能力，複習大學課業，提早進入實驗室學習&hellip;.等。</p>
-<p>&ndash;碩一:選修研究所專業課程，擔任實驗室助教，加入研究計畫，多參與學校演講 or 研討會，決定好論文方向&hellip;&hellip;等。</p>
-<p>&ndash;碩二:完成畢業論文，參加就業博覽會尋求預聘資格，為未來工作準備</p>
-<p>&ndash;畢業後:進入業界，在校攻讀博士班，出國留學成為國際人才&hellip;&hellip;等。</p>
-<p>*<strong>未來研究方向!!!</strong></p>
-<p>這個算是讀書計畫中會提及的部分，主要是簡單闡述未來進入研究所想朝向哪方面發展.若你不知道你進研究所想研究甚麼也沒關係，就根據你做的專題是甚麼就朝向那個方向，並連結到當今通訊的熱門主題：4G、5G、MIMO技術、毫米波、無線網路應用&hellip;..等等。</p>
-<p>*<strong>師長推薦函</strong></p>
-<p>幾乎學校都會規定要附上推薦函.與其找系上有名氣卻與你不熟的教授，建議找1~2位與你熟識的老師幫忙(例如你的專題指導教授)他們比較了解你的學習狀況，在撰寫的時候比較不會寫出像罐頭回復的制式冷冰冰文章。</p>
-<p>最後一點,必須要附上的</p>
-<p>*<strong>專題成果!!!!!</strong></p>
-<p>能夠在有限頁數內附上整份專題是最好的，這是教授除了看成績以外第二個教授會比較注意的東西。</p>
-<p>以上就是第一點:備審資料當中會需要的各種東西.在下一篇主題文章中我會繼續講解若你很幸運地PASS第一階段初試後，要如何準備接下來的面試。</p>
+              <p>Leetcode於每周末都會舉辦線上的程式解題比賽,在比賽結束後便會釋出最新的題目供大家練習.這次要介紹的便是上週出現的新題目.</p>
+<p>題目原文如下:</p>
+<blockquote>
+<p>Initially, there is a Robot at position (0, 0). Given a sequence of its moves, judge if this robot makes a circle, which means it moves back to <strong>the original place</strong>.</p>
+</blockquote>
+<blockquote>
+<p>The move sequence is represented by a string. And each move is represent by a character. The valid robot moves are <code>R</code> (Right), <code>L</code>(Left), <code>U</code> (Up) and <code>D</code> (down). The output should be true or false representing whether the robot makes a circle.</p>
+</blockquote>
+<pre><code>**Example 1:**
+Input: &quot;UD&quot;
+Output: true
+
+</code></pre><pre><code>**Example 2:**
+Input: &quot;LL&quot;
+Output: false
+
+</code></pre><p>題目假設有一機器人在原點位置,則給定字串UDLR來讓它上下左右在二維平面中移動,回傳最後位置是否還停留在原點上.</p>
+<p>一開始看到時我的想法是先假設好一個二維的空間,</p>
+<p>若程式偵測到有&rsquo;U&rsquo;的話,則在Y軸方向加1,</p>
+<p>有&rsquo;R&rsquo;的話則在X軸方向加1&hellip;.諸如此類.</p>
+<p>但是其實就程式的結果來看,我們並不需要知道機器人最後會落在座標平面上的哪個位置,重點是只要知道&quot;在不在原點上&quot;就好了.</p>
+<p>因此程式設計的邏輯還可以再簡單</p>
+<p>精簡成為一目標就是&quot;走向左邊的步數&quot;等於&quot;走向右邊的步數&rdquo;,並且&quot;走向上的步數&quot;等於&quot;走向下的步數&rdquo;</p>
+<p>意指在要看字串中&quot;U的個數=D的個數&quot;並且&quot;L的個數=R的個數&rdquo;</p>
+<p>達成這個條件就知道機器人已經回到原點了</p>
+<p>C語言要在字串中找尋特定字元的方法,我們可以用strpbrk()這個函式:</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0007/0.jpg" alt="img/post/Text0007/0.jpg"></p>
+<p>先前在</p>
+<p><a href="https://www.blogger.com/blog/post/edit/2742416031412549523/5597976542973441640#">[思路]LeetCode Problems- 537. Complex Number Multiplication</a></p>
+<p>中有提到一些字串函式的用法,使用這函式時這會回傳字串中特定符號的位址,所以要指派一個指標給它.</p>
+<p>此外這函式只會找出字串中&quot;第一次&quot;出現的位址,這樣我們就要用迴圈&mdash;&ndash;例如while&mdash;&ndash;來讓這函式能重複查詢.</p>
+<p>首先,定義好要搜尋的字元字串以及指標,以其中一個步數&quot;向右走&quot;為例:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">char</span> key[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;R&#34;</span>;
+<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span> pch;
+</code></pre></div><p>並且定義一個用來存取&quot;字母R出現了多少次&quot;的int變數,初始為0:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> R<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</code></pre></div><p>假設存放一連串UDLR指定步數的目標字串定義為moves,則要找出有多少個R的話一開始先寫:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">pch <span style="color:#f92672">=</span> strpbrk (moves, key);
+</code></pre></div><p>這裡只有找出第一次出現R字元的位址.欲要讓這函式不斷執行則要搭配while迴圈如下:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">while</span> (pch <span style="color:#f92672">!=</span> NULL){
+    R<span style="color:#f92672">++</span>;
+    pch <span style="color:#f92672">=</span> strpbrk (pch<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,key);
+}
+</code></pre></div><p>當指標不為空位址時,則紀錄R步數+1,並且從下一個位置再開始查詢一次,直到把整個字串都走完為止.</p>
+<p>我們將這方法依序使用到針對 U,L,D上,則就能知道上下左右的步數各走多少次了,</p>
+<p>最後就是再判斷機器人經過這些步數後,是否還在原點上:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">if</span> ( R<span style="color:#f92672">=</span> <span style="color:#f92672">=</span>L <span style="color:#f92672">&amp;&amp;</span> U<span style="color:#f92672">=</span> <span style="color:#f92672">=</span>D ){
+
+    <span style="color:#66d9ef">return</span> true;
+}
+<span style="color:#66d9ef">else</span>{
+
+    <span style="color:#66d9ef">return</span> false;
+}
+</code></pre></div><p>此題的程式就這樣解決了~~!</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0007/1.jpg" alt="img/post/Text0007/1.jpg"></p>
               
             </div>
           </div>
@@ -324,7 +308,7 @@ if (!doNotTrack) {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/09/text0004/" data-tooltip="[LeetCode]Problems-231.326.342. Power of Two/Three/Four">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/07/text0004/" data-tooltip="[LeetCode]Problems- 537. Complex Number Multiplication">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -332,7 +316,7 @@ if (!doNotTrack) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/09/text0003/" data-tooltip="[LeetCode]Problems-121. Best Time to Buy and Sell Stock">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/09/text0004/" data-tooltip="[LeetCode]Problems-231.326.342. Power of Two/Three/Four">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -350,7 +334,7 @@ if (!doNotTrack) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://YuShengLi1105.github.io/2017/09/text0001/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://YuShengLi1105.github.io/2017/08/text0004/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
@@ -398,7 +382,7 @@ if (!doNotTrack) {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/09/text0004/" data-tooltip="[LeetCode]Problems-231.326.342. Power of Two/Three/Four">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/07/text0004/" data-tooltip="[LeetCode]Problems- 537. Complex Number Multiplication">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -406,7 +390,7 @@ if (!doNotTrack) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/09/text0003/" data-tooltip="[LeetCode]Problems-121. Best Time to Buy and Sell Stock">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/09/text0004/" data-tooltip="[LeetCode]Problems-231.326.342. Power of Two/Three/Four">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -424,7 +408,7 @@ if (!doNotTrack) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://YuShengLi1105.github.io/2017/09/text0001/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://YuShengLi1105.github.io/2017/08/text0004/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
@@ -454,7 +438,7 @@ if (!doNotTrack) {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FYuShengLi1105.github.io%2F2017%2F09%2Ftext0001%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FYuShengLi1105.github.io%2F2017%2F08%2Ftext0004%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
@@ -544,9 +528,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/YuShengLi1105.github.io\/2017\/09\/text0001\/';
+          this.page.url = 'https:\/\/YuShengLi1105.github.io\/2017\/08\/text0004\/';
           
-            this.page.identifier = '\/2017\/09\/text0001\/'
+            this.page.identifier = '\/2017\/08\/text0004\/'
           
         };
         (function() {

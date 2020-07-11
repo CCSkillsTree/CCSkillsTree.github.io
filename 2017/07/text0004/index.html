@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.72.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="CC Skills Tree">
+<meta name="keywords" content="">
+<meta name="description" content="這次要來解決的問題是複數相乘Complex Number Multiplication.
+C語言不像在大學時期所碰的MATLAB一樣有方便的數學函數工具箱,可以幫學生做計算&mdash;&ndash;應該說要用C計算數學也是可以,但基本上兩種軟體的功用大不相同&mdash;&ndash;這次的問題在為自己將來有可能會碰到MATLAB轉C的需求作準備.">
+
+
+<meta property="og:description" content="這次要來解決的問題是複數相乘Complex Number Multiplication.
+C語言不像在大學時期所碰的MATLAB一樣有方便的數學函數工具箱,可以幫學生做計算&mdash;&ndash;應該說要用C計算數學也是可以,但基本上兩種軟體的功用大不相同&mdash;&ndash;這次的問題在為自己將來有可能會碰到MATLAB轉C的需求作準備.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[LeetCode]Problems- 537. Complex Number Multiplication">
+<meta name="twitter:title" content="[LeetCode]Problems- 537. Complex Number Multiplication">
+<meta property="og:url" content="https://YuShengLi1105.github.io/2017/07/text0004/">
+<meta property="twitter:url" content="https://YuShengLi1105.github.io/2017/07/text0004/">
+<meta property="og:site_name" content="通電技能樹">
+<meta property="og:description" content="這次要來解決的問題是複數相乘Complex Number Multiplication.
+C語言不像在大學時期所碰的MATLAB一樣有方便的數學函數工具箱,可以幫學生做計算&mdash;&ndash;應該說要用C計算數學也是可以,但基本上兩種軟體的功用大不相同&mdash;&ndash;這次的問題在為自己將來有可能會碰到MATLAB轉C的需求作準備.">
+<meta name="twitter:description" content="這次要來解決的問題是複數相乘Complex Number Multiplication.
+C語言不像在大學時期所碰的MATLAB一樣有方便的數學函數工具箱,可以幫學生做計算&mdash;&ndash;應該說要用C計算數學也是可以,但基本上兩種軟體的功用大不相同&mdash;&ndash;這次的問題在為自己將來有可能會碰到MATLAB轉C的需求作準備.">
+<meta property="og:locale" content="zh-tw">
+
+  
+    <meta property="article:published_time" content="2017-07-22T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2017-07-22T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="LeetCode">
+    
+  
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://YuShengLi1105.github.io/img/post/Text0008/1.jpg">
+  <meta property="twitter:image" content="https://YuShengLi1105.github.io/img/post/Text0008/1.jpg">
+
+
+
+
+
+  <meta property="og:image" content="https://YuShengLi1105.github.io/img/bloglogo.png">
+  <meta property="twitter:image" content="https://YuShengLi1105.github.io/img/bloglogo.png">
+
+
+    <title>[LeetCode]Problems- 537. Complex Number Multiplication</title>
+
+    <link rel="icon" href="https://YuShengLi1105.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://YuShengLi1105.github.io/2017/07/text0004/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://YuShengLi1105.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-171608259-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://YuShengLi1105.github.io/">通電技能樹</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://YuShengLi1105.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://YuShengLi1105.github.io/img/bloglogo.png" alt="作者的圖片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://YuShengLi1105.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://YuShengLi1105.github.io/img/bloglogo.png" alt="作者的圖片" />
+        </a>
+        <h4 class="sidebar-profile-name">CC Skills Tree</h4>
+        
+          <h5 class="sidebar-profile-bio">&lsquo;I&rsquo;ve seen things you people wouldn&rsquo;t believe&hellip;. attack ships on fire off the shoulder of Orion. I&rsquo;ve watched see Beams glitter in the dark near the Tannhauser Gate. All those moments, will be lost in time like tears in rain&hellip;&rsquo;</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://YuShengLi1105.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首頁</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://YuShengLi1105.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分類</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://YuShengLi1105.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">標籤</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://YuShengLi1105.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">所有文章</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://YuShengLi1105.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">關於我</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      [LeetCode]Problems- 537. Complex Number Multiplication
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2017-07-22T00:00:00Z">
+        
+  
+  
+  
+  
+    22 七月 2017
+  
+
+      </time>
+    
+    
+  
+  
+    <span>分類</span>
+    
+      <a class="category-link" href="https://YuShengLi1105.github.io/categories/leetcode">LeetCode</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>這次要來解決的問題是複數相乘Complex Number Multiplication.</p>
+<p>C語言不像在大學時期所碰的MATLAB一樣有方便的數學函數工具箱,可以幫學生做計算&mdash;&ndash;應該說要用C計算數學也是可以,但基本上兩種軟體的功用大不相同&mdash;&ndash;這次的問題在為自己將來有可能會碰到MATLAB轉C的需求作準備.</p>
+<p>題目原文如下:</p>
+<blockquote>
+<p>Given two strings representing two <a href="https://www.blogger.com/blog/post/edit/2742416031412549523/3025632757029464537#">complex numbers</a>.</p>
+</blockquote>
+<blockquote>
+<p>You need to return a string representing their multiplication. Note i2 = -1 according to the definition.</p>
+</blockquote>
+<pre><code>**Example 1:**
+Input: &quot;1+1i&quot;, &quot;1+1i&quot;
+Output: &quot;0+2i&quot;
+Explanation: (1 + i) * (1 + i) = 1 + i2 + 2 * i = 2i, and you need convert it to the form of 0+2i.
+
+</code></pre><pre><code>**Example 2:**
+Input: &quot;1+-1i&quot;, &quot;1+-1i&quot;
+Output: &quot;0+-2i&quot;
+Explanation: (1 - i) * (1 - i) = 1 + i2 - 2 * i = -2i, and you need convert it to the form of 0+-2i.
+
+</code></pre><p><strong>Note:</strong></p>
+<ol>
+<li>The input strings will not have extra blank.</li>
+<li>The input strings will be given in the form of <strong>a+bi</strong>, where the integer <strong>a</strong> and <strong>b</strong> will both belong to the range of [-100, 100]. And <strong>the output should be also in this form</strong>.</li>
+</ol>
+<p>題目的大意為給定兩個以a+bi表示的複數,並且還是字串的形態,</p>
+<p>求兩個複數相乘的結果,同樣要以a+bi及字串的型態來表示</p>
+<p>首先,兩個字串相乘的結果為:</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0008/1.jpg" alt="img/post/Text0008/1.jpg"></p>
+<p>無論abcd輸入的值是正還是負,相乘出來的結果永遠會是 實部=a<em>c-b</em>d 虛部=a<em>d+b</em>c</p>
+<p>至此,我們可以想出程式運作的流程如下:</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0008/2.jpg" alt="img/post/Text0008/2.jpg"></p>
+<p>由於輸入的型態是字串不能直接做運算,故要把數字部分提出來,做完運算後再放回字串中,回傳給程式就完成了.</p>
+<p>然而正當我要開始撰寫時,卻為leetcode網頁上規範的函數格式感到困惑不已,leetcode網站給的初始程式碼是這樣的:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">complexNumberMultiply</span>(<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> a, <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> b) {
+
+}
+</code></pre></div><p>此函式用到的不是一般所常見的char字元陣列,而是多了個間接運算子*的指標記號.</p>
+<p>而這跟單純的char陣列有何不同呢?</p>
+<p>根據 Stephen Prata所著的 C Primer Plus 6th Edition關於指標與陣列的差別:</p>
+<blockquote>
+<p>&ldquo;&hellip;.What is the difference, then, between an array and a pointer form? The array form ( ar1[] ) causes <strong>an array of 29 elements (one for each character plus one for the terminating &lsquo;\0&rsquo; ) to be allocated in the computer memory. Each element is initialized to the corresponding character of the string literal.</strong> Typically, what happens is that the quoted string is stored in a data segment that is part of the executable file; when the program is loaded into memory, so is that string. The quoted string is said to be in static memory . But the memory for the array is allocated only after the program begins running. At that time, the quoted string is copied into the array. &hellip;.&rdquo;</p>
+</blockquote>
+<p>使用 char ar1[] 這種語法所宣告出來的是實實在在的陣列(加上結束字元/0)每個字元元素被配置於陣列所需的電腦記憶體</p>
+<blockquote>
+<p>&ldquo;&hellip;&hellip; The pointer form ( *pt1 ) also causes 29 elements in static storage to be set aside for the string. In addition, <strong>once the program begins execution, it sets aside one more storage location for the pointer variable pt1 and stores the address of the string in the pointer variable. This variable initially points to the first character of the string, but the value can be changed.</strong> Therefore, you can use the increment operator. For instance, ++pt1 would point to the second character ( o )&hellip;&hellip;..&rdquo;</p>
+</blockquote>
+<p>使用指標*pt1同樣也會產生字串,但還會多配置一貯存空間給指標變數pt1,所代表的是字串的<strong>位址</strong> ,指向字串的第一個字元.</p>
+<p>所以比較起來,一個是字元陣列,另一個是指向字串的指標,在實際使用上,兩種都可以使用陣列的語法,都可以加上指標,但只有指標型態的敘述才可以使用遞增運算子(例如pt1++)因此運算起來速度較快.</p>
+<p>更多相似的語法可以再繼續參考此CEDN博客:深入 char * ,char ** ,char a ,char *a[] 内核</p>
+<p><a href="https://www.blogger.com/blog/post/edit/2742416031412549523/3025632757029464537#">http://blog.csdn.net/daiyutage/article/details/8604720</a></p>
+<p>回過頭來看此題目,若要分割字串的元素,我們可以用函式strtok:</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0008/3.jpg" alt="img/post/Text0008/3.jpg"></p>
+<p>[附註:有const關鍵字的原型,表示此字串不能被函數更改]</p>
+<p>利用這個函式,我們就能把需要的數字分切出來:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span> pch;
+pch <span style="color:#f92672">=</span> strtok(a,<span style="color:#e6db74">&#34;+&#34;</span>); <span style="color:#75715e">//此時pch為實部
+</span></code></pre></div><p>若要求出複數的虛部,則令原pch為NULL,把最後一段切出來:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">pch <span style="color:#f92672">=</span> strtok (NULL, <span style="color:#e6db74">&#34;+&#34;</span>);<span style="color:#75715e">//此時pch為虛部
+</span></code></pre></div><p>分割出來後還要針對型態是字串的數字轉型為int才可以做運算,這時就會用到atoi():</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span> pch;
+pch <span style="color:#f92672">=</span> strtok(a,<span style="color:#e6db74">&#34;+&#34;</span>);
+<span style="color:#66d9ef">int</span> a1 <span style="color:#f92672">=</span> atoi(pch);
+pch <span style="color:#f92672">=</span> strtok (NULL, <span style="color:#e6db74">&#34;+&#34;</span>);
+<span style="color:#66d9ef">int</span> b1 <span style="color:#f92672">=</span> atoi(pch);
+</code></pre></div><p>atoi()可以忽略掉數字參雜複數符號i的情況,引述C Primer Plus 6th Edition關於atoi()的使用:</p>
+<blockquote>
+<p>&ldquo;&hellip;&hellip; The atoi() function still works if the string only begins with an integer. In that case, it converts characters until it encounters something that is not part of an integer. For example, atoi(&ldquo;42regular&rdquo;) returns the integer 42 . &hellip;&hellip;&rdquo;</p>
+</blockquote>
+<p>現在我們求出數字之後,就可以做複數相乘的計算:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> re<span style="color:#f92672">=</span>(a1<span style="color:#f92672">*</span>a2<span style="color:#f92672">-</span>b1<span style="color:#f92672">*</span>b2);
+<span style="color:#66d9ef">int</span> im<span style="color:#f92672">=</span>(a1<span style="color:#f92672">*</span>b2<span style="color:#f92672">+</span>b1<span style="color:#f92672">*</span>a2);
+</code></pre></div><p>算好之後還要再轉換回字串的型態.此時要注意</p>
+<p><strong>不能用itoa()做轉換,編譯器不再支援此舊函式的使用,取而代之的是sprintf().</strong></p>
+<p>它的運作方式類似於printf(),不同的是它會將資料輸出為字串而非輸出到螢幕上:</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0008/4.jpg" alt="img/post/Text0008/4.jpg"></p>
+<p>利用此函式我們可以把原先的int資料轉換成字串型態,如以下寫法:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>W1[<span style="color:#ae81ff">64</span>];
+<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>W2[<span style="color:#ae81ff">64</span>];
+sprintf(W1,<span style="color:#e6db74">&#34;%d&#34;</span>,re); <span style="color:#75715e">//把re的數值存進W1字串
+</span><span style="color:#75715e"></span>sprintf(W2,<span style="color:#e6db74">&#34;%d&#34;</span>,im); <span style="color:#75715e">//把im的數值存進W2字串
+</span></code></pre></div><p>最後,還需要把這兩個實部及虛部合起來以a+bi的表示式回傳,而字串的合併就需要使用到strcat():</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0008/5.jpg" alt="img/post/Text0008/5.jpg"></p>
+<p>使用此函式我們就可以將兩兩字串合併在一起:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">strcat(strcat(W1,<span style="color:#e6db74">&#34;+&#34;</span>),strcat(W2,<span style="color:#e6db74">&#34;i&#34;</span>));
+</code></pre></div><p>這樣最終就完成了整個程式</p>
+<p>然而在傳送給leetcode時,卻又產生其他的問題</p>
+<p>文章前面有提及到,leetcode網頁上把問題當成一個個函式來表述,故寫至結尾時要回傳數值給程式,</p>
+<p>以我程式碼為例,我最後結尾會寫成</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">return</span> W1;
+</code></pre></div><p>回傳字串給程式.而看似最終submit接收不到我回傳的字串多少:</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0008/6.jpg" alt="img/post/Text0008/6.jpg"></p>
+<p>後來仔細檢查,才發覺這跟記憶體配置有密切的關係.</p>
+<p>由於我宣告char陣列字元是屬於<strong>區域變數</strong>, 而當程式運作離開函式時,原本存元素的記憶體位址就會被釋放出來,回傳寫的位址將則變得一點意義都沒有</p>
+<p>這跟C++ STL庫的string有所不同</p>
+<p>若要讓函式中的陣列元素存在的話,就要把它改成是全域變數,即加上static:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#f92672">**</span><span style="color:#66d9ef">static</span><span style="color:#f92672">**</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>W1[<span style="color:#ae81ff">64</span>];
+<span style="color:#f92672">**</span><span style="color:#66d9ef">static</span><span style="color:#f92672">**</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>W2[<span style="color:#ae81ff">64</span>];
+</code></pre></div><p>就可以成功回傳字串了~</p>
+<p>[附註2:另有一方法則是用動態記憶體配置malloc()]</p>
+<p><img src="https://YuShengLi1105.github.io/img/post/Text0008/7.jpg" alt="img/post/Text0008/7.jpg"></p>
+<p>這題的概念雖然看似簡單,但實際上還有許多眉眉角角要顧及到,</p>
+<p>之後再來看其他題目,我們下周見~!</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/07/text0005/" data-tooltip="[LeetCode]Problems- 461. Hamming Distance">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/08/text0004/" data-tooltip="[LeetCode]Problems- 657. Judge Route Circle">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://YuShengLi1105.github.io/2017/07/text0004/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 <a href="https://github.com/YuShengLi1105">CCSkillsTree</a>. 版權所有All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/07/text0005/" data-tooltip="[LeetCode]Problems- 461. Hamming Distance">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://YuShengLi1105.github.io/2017/08/text0004/" data-tooltip="[LeetCode]Problems- 657. Judge Route Circle">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://YuShengLi1105.github.io/2017/07/text0004/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FYuShengLi1105.github.io%2F2017%2F07%2Ftext0004%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://YuShengLi1105.github.io/img/bloglogo.png" alt="作者的圖片" />
+    
+    <h4 id="about-card-name">CC Skills Tree</h4>
+    
+      <div id="about-card-bio">&lsquo;I&rsquo;ve seen things you people wouldn&rsquo;t believe&hellip;. attack ships on fire off the shoulder of Orion. I&rsquo;ve watched see Beams glitter in the dark near the Tannhauser Gate. All those moments, will be lost in time like tears in rain&hellip;&rsquo;</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Software Engineer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Taipei，Taiwan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    <div id="cover" style="background-image:url('https://images.unsplash.com/photo-1590933937035-8a095cd97175?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1534&amp;q=80');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://YuShengLi1105.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/YuShengLi1105.github.io\/2017\/07\/text0004\/';
+          
+            this.page.identifier = '\/2017\/07\/text0004\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'ccskillstree';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
