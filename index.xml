@@ -2,78 +2,78 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>通電技能樹</title>
-    <link>https://YuShengLi1105.github.io/</link>
+    <link>https://CCSkillsTree.github.io/</link>
     <description>Recent content on 通電技能樹</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Sat, 28 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://YuShengLi1105.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://CCSkillsTree.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>106年推甄通訊所心得(下)</title>
-      <link>https://YuShengLi1105.github.io/2017/10/text0002/</link>
+      <link>https://CCSkillsTree.github.io/2017/10/text0002/</link>
       <pubDate>Sat, 28 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://YuShengLi1105.github.io/2017/10/text0002/</guid>
+      <guid>https://CCSkillsTree.github.io/2017/10/text0002/</guid>
       <description>&lt;p&gt;恭喜學弟妹們通過第一階段的審查，不過在此時才是推甄真正的考驗.接續上一篇的主題，這次來跟大家分享研究所面試的心得.&lt;/p&gt;
 &lt;p&gt;本篇文主要包括了在大學畢業前於系上舉辦的考研分享會的內容，並再多補充些當時時間有限，未能在分享會上提及的小技巧.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[LeetCode]Problems-121. Best Time to Buy and Sell Stock</title>
-      <link>https://YuShengLi1105.github.io/2017/09/text0003/</link>
+      <link>https://CCSkillsTree.github.io/2017/09/text0003/</link>
       <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://YuShengLi1105.github.io/2017/09/text0003/</guid>
+      <guid>https://CCSkillsTree.github.io/2017/09/text0003/</guid>
       <description>&lt;p&gt;此篇文章要探討的問題Best Time to Buy and Sell Stock,意指如何在股市波段中找出最大的利潤.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>106年推甄通訊所心得(上)</title>
-      <link>https://YuShengLi1105.github.io/2017/09/text0001/</link>
+      <link>https://CCSkillsTree.github.io/2017/09/text0001/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://YuShengLi1105.github.io/2017/09/text0001/</guid>
+      <guid>https://CCSkillsTree.github.io/2017/09/text0001/</guid>
       <description>&lt;p&gt;每年的九月底到十月初這段期間是大學生準備推甄研究所的繁忙時刻，去年的我在這個時間點也是忙得焦頭爛額。
 這次想利用此篇文章來跟讀者分享版主我個人在準備碩班推甄的經驗，希望可以幫到同樣也是有意願來讀通訊相關科系的學弟妹們。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[LeetCode]Problems-231.326.342. Power of Two/Three/Four</title>
-      <link>https://YuShengLi1105.github.io/2017/09/text0004/</link>
+      <link>https://CCSkillsTree.github.io/2017/09/text0004/</link>
       <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://YuShengLi1105.github.io/2017/09/text0004/</guid>
+      <guid>https://CCSkillsTree.github.io/2017/09/text0004/</guid>
       <description>&lt;p&gt;本篇文章要闡述的是筆者在LeetCode上碰到的一種題型:冪次(Power),大概有三個題目與其相關&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[LeetCode]Problems- 657. Judge Route Circle</title>
-      <link>https://YuShengLi1105.github.io/2017/08/text0004/</link>
+      <link>https://CCSkillsTree.github.io/2017/08/text0004/</link>
       <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://YuShengLi1105.github.io/2017/08/text0004/</guid>
+      <guid>https://CCSkillsTree.github.io/2017/08/text0004/</guid>
       <description>&lt;p&gt;Leetcode於每周末都會舉辦線上的程式解題比賽,在比賽結束後便會釋出最新的題目供大家練習.這次要介紹的便是上週出現的新題目.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[LeetCode]Problems- 537. Complex Number Multiplication</title>
-      <link>https://YuShengLi1105.github.io/2017/07/text0008/</link>
+      <link>https://CCSkillsTree.github.io/2017/07/text0008/</link>
       <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://YuShengLi1105.github.io/2017/07/text0008/</guid>
+      <guid>https://CCSkillsTree.github.io/2017/07/text0008/</guid>
       <description>&lt;p&gt;這次要來解決的問題是複數相乘Complex Number Multiplication.&lt;/p&gt;
 &lt;p&gt;C語言不像在大學時期所碰的MATLAB一樣有方便的數學函數工具箱,可以幫學生做計算&amp;mdash;&amp;ndash;應該說要用C計算數學也是可以,但基本上兩種軟體的功用大不相同&amp;mdash;&amp;ndash;這次的問題在為自己將來有可能會碰到MATLAB轉C的需求作準備.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[LeetCode]Problems- 461. Hamming Distance</title>
-      <link>https://YuShengLi1105.github.io/2017/07/text0005/</link>
+      <link>https://CCSkillsTree.github.io/2017/07/text0005/</link>
       <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://YuShengLi1105.github.io/2017/07/text0005/</guid>
+      <guid>https://CCSkillsTree.github.io/2017/07/text0005/</guid>
       <description>&lt;p&gt;有鑑於上次按隨機鍵出來的題目難度特高,花了不少心思,
 並且上週去成大一個禮拜沒碰到程式許久,
 我決定這次來解決一些較簡單的題目,
@@ -83,10 +83,10 @@
     
     <item>
       <title>[LeetCode]Problems- 300. Longest Increasing Subsequence</title>
-      <link>https://YuShengLi1105.github.io/2017/06/text0006/</link>
+      <link>https://CCSkillsTree.github.io/2017/06/text0006/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://YuShengLi1105.github.io/2017/06/text0006/</guid>
+      <guid>https://CCSkillsTree.github.io/2017/06/text0006/</guid>
       <description>&lt;p&gt;在做完&lt;a href=&#34;https://www.blogger.com/blog/post/edit/2742416031412549523/484633310626102112#&#34;&gt;[思路]LeetCode Problems- 441. Arranging Coins&lt;/a&gt;這題之後
 隔天一早十點多起床想說再繼續挑戰一題來試看看
 於是按下了LeetCode首頁右下的&amp;quot;Pick One&amp;quot;鍵
